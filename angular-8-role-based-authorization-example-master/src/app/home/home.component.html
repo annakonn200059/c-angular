@@ -1,0 +1,121 @@
+﻿<div class="card mt-4">
+    <h4 class="card-header">Home</h4>
+    <div class="card-body">
+        
+        <p>Your role is: <strong>{{currentUser.role}}</strong>.</p>
+        <p>This page can be accessed by <u>all users</u>.</p>
+        <p class="mb-1">Current user from secure api end point:</p>
+        <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+        <ul *ngIf="userFromApi">
+            <li>{{userFromApi.firstName}} {{userFromApi.lastName}}</li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="container">
+
+    
+    <h5 class="d-flex justify-content-center">Hockey Club Database User</h5>
+
+    
+    <div>
+        <h5 style="margin-bottom: 15px;margin-left: 20px;">Таблицы</h5>
+    <nav class="navbar navbar-expand-sm bg-light navbar-dark">
+        <ul class="navbar-nav">
+
+
+            <li class="nav-item">
+                <button routerLink="goalsu" class="
+                m-1 btn btn-light btn-outline-primary" Button>Goals</button>
+            </li>
+
+
+            <li class="nav-item">
+                <button routerLink="managementWorkersu" class="
+                m-1 btn btn-light btn-outline-primary" Button> managementWorkers</button>
+            </li>
+
+            <li class="nav-item">
+                <button routerLink="matchesu" class="
+                m-1 btn btn-light btn-outline-primary" Button>matches</button>
+            </li>
+
+            <li class="nav-item">
+                <button routerLink="opponentsu" class="
+                m-1 btn btn-light btn-outline-primary" Button>opponents</button>
+            </li>
+
+            <li class="nav-item">
+                <button routerLink="placeu" class="
+                m-1 btn btn-light btn-outline-primary" Button>Place</button>
+            </li>
+
+            <li class="nav-item">
+                <button routerLink="playeru" class="
+                m-1 btn btn-light btn-outline-primary" Button>player</button>
+            </li>
+        </ul>
+    </nav>
+        </div>
+        <div>
+            <nav class="navbar navbar-expand-sm bg-light navbar-dark">
+                <ul class="navbar-nav">
+            <li class="nav-item">
+                <button routerLink="seasonsu" class="
+                m-1 btn btn-light btn-outline-primary" Button>seasons</button>
+            </li>
+
+            <li class="nav-item">
+                <button routerLink="seasonTimeTableu" class="
+                m-1 btn btn-light btn-outline-primary" Button>season Time Table</button>
+            </li>
+
+            <li class="nav-item">
+                <button routerLink="teamu" class="
+                m-1 btn btn-light btn-outline-primary" Button>teams</button>
+            </li>
+
+            <li class="nav-item">
+                <button routerLink="trainersu" class="
+                m-1 btn btn-light btn-outline-primary" Button>trainers</button>
+            </li>
+
+            <li class="nav-item">
+                <button routerLink="trainingTimeTableu" class="
+                m-1 btn btn-light btn-outline-primary" Button>training Time Table</button>
+            </li>
+
+           
+        </ul>
+    </nav>
+        </div>
+
+         
+    <div>
+        <h5 style="margin-bottom: 15px;margin-left: 20px;">Представления</h5>
+    <nav class="navbar navbar-expand-sm bg-light navbar-dark">
+        <ul class="navbar-nav">
+        </ul>
+
+        <li class="nav-item">
+            <button routerLink="matchInfo" class="
+            m-1 btn btn-light btn-outline-primary" Button>Matches information</button>
+        </li>
+        
+        <li class="nav-item">
+            <button routerLink="managerInfo" class="
+            m-1 btn btn-light btn-outline-primary" Button>Staff of our club</button>
+        </li>
+
+
+
+
+        
+    </nav>
+        </div>
+        
+
+        
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,50 @@
+<div class="form-froup row" >
+    <label class="col-sm-2 col-form-label">playerNumber</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="playerNumber"
+        placeholder="Enter playerNumber">
+    </div>
+
+    <label class="col-sm-2 col-form-label">playerScore</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="playerScore"
+        placeholder="Enter playerScore">
+    </div>
+
+    <label class="col-sm-2 col-form-label">position</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="position"
+        placeholder="Enter position">
+    </div>
+
+
+    <label class="col-sm-2 col-form-label">id player worker</label>
+    <div class="col-sm-10">
+        <select class="form-control" [(ngModel)]="id_player_worker">
+            <option>--Select--</option>
+            <option *ngFor="let id of WorkerList">
+                {{id.idWorker}}
+            </option>
+        </select>
+    </div>
+
+    <label class="col-sm-2 col-form-label">Id team</label>
+    <div class="col-sm-10">
+        <select class="form-control" [(ngModel)]="id_player_team">
+            <option>--Select--</option>
+            <option *ngFor="let id of TeamList">
+                {{id.idTeam}}
+            </option>
+        </select>
+    </div>
+    
+
+</div>
+
+<button (click)="addPlayer()" *ngIf="play.idPlayer==0" class="btn btn-primary">
+    Add
+</button>
+
+<button (click)="updatePlayer()" *ngIf="play.idPlayer!=0" class="btn btn-primary">
+    Update
+</button>

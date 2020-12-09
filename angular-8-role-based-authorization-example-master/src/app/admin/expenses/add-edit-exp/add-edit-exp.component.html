@@ -1,0 +1,55 @@
+<div class="form-froup row" >
+    <label class="col-sm-2 col-form-label">Food</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="food"
+        placeholder="Enter food">
+    </div>
+
+    <label class="col-sm-2 col-form-label">Equipment</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="equipment"
+        placeholder="Enter equipment">
+    </div>
+
+    <label class="col-sm-2 col-form-label">Rent</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="rent"
+        placeholder="Enter rent">
+    </div>
+
+    <label class="col-sm-2 col-form-label">Treatment cost</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="treatmentCost"
+        placeholder="Enter treatmentCost">
+    </div>
+
+    <label class="col-sm-2 col-form-label">Id team</label>
+    <div class="col-sm-10">
+        <select class="form-control" [(ngModel)]="id_expenses_team">
+            <option>--Select--</option>
+            <option *ngFor="let id of TeamList">
+                {{id.idTeam}}
+            </option>
+        </select>
+    </div>
+
+    <label class="col-sm-2 col-form-label">Id season</label>
+    <div class="col-sm-10">
+        <select class="form-control" [(ngModel)]="id_expenses_seasons">
+            <option>--Select--</option>
+            <option *ngFor="let id of SeasonList">
+                {{id.idSeasons}}
+            </option>
+        </select>
+    </div>
+    
+
+</div>
+
+<button (click)="addExpenses()" *ngIf="exp.idExpenses==0" class="btn btn-primary">
+    Add
+</button>
+
+<button (click)="updateExpenses()" *ngIf="exp.idExpenses!=0" class="btn btn-primary">
+    Update
+</button>

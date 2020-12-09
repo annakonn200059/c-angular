@@ -1,0 +1,36 @@
+<div class="form-froup row">
+
+
+
+    <label class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="Name"
+        placeholder="Enter your name">
+    </div>
+
+    <label class="col-sm-2 col-form-label">Number</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="number"
+        placeholder="Enter your number">
+    </div>
+
+    <label class="col-sm-2 col-form-label">Job</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="job"
+        placeholder="Enter the job you want to apply to">
+    </div>
+
+    <label class="col-sm-2 col-form-label">Working experience</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="workingExperience"
+        placeholder="Enter your working experience">
+    </div>
+</div>
+
+<button (click)="addManagerInfo()" *ngIf="manInf.Name==0" class="btn btn-primary">
+    Add
+</button>
+
+
+
+

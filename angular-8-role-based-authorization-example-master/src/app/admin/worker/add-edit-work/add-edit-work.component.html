@@ -1,0 +1,28 @@
+<div class="form-froup row">
+
+    <label class="col-sm-2 col-form-label">FIO</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="FIO"
+        placeholder="Enter FIO">
+    </div>
+
+    <label class="col-sm-2 col-form-label">workingExperience</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="workingExperience"
+        placeholder="Enter workingExperience">
+    </div>
+
+    <label class="col-sm-2 col-form-label">salary</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="salary"
+        placeholder="Enter salary">
+    </div>
+</div>
+
+<button (click)="addWorker()" *ngIf="work.idWorker==0" class="btn btn-primary">
+    Add
+</button>
+
+<button (click)="updateWorker()" *ngIf="work.idWorker!=0" class="btn btn-primary">
+    Update
+</button>
